@@ -1,0 +1,26 @@
+Once kubectl or minikube is started then we need to create a namespace in kubectl using below command to install ArgoCD
+
+#kubectl create namespace argocd
+#kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+Get all the ArgoCD services running in kubernetes cluster using below command:
+
+#kubectl get services -n argocd
+
+And to access ArgoCD Server, we need to do port-forward to access via browser by running below command
+
+#kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+After this, we should be able to access ArgoCD via below URL:
+https://127.0.0.1:8080/login?return_url=https%3A%2F%2F127.0.0.1%3A8080%2Fapplications
+
+And we need to login with credentials, username is by default admin and password we need to get it from ArgoCD security 
+file by running below command
+
+#kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
+
+Then it gives us the password:
+
+usernmae : admin
+password : oke6Hnwzk8Yi6eYI
+
