@@ -24,3 +24,7 @@ Then it gives us the password:
 usernmae : admin
 password : oke6Hnwzk8Yi6eYI
 
+Run the below command in application.yaml path
+
+kubectl apply -f application.yaml
+
