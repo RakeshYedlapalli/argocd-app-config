@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: 9640343275/front-end-react:1.1.1
+        image: 9640343275/front-end-react:latest
         ports:
         - containerPort: 8080
