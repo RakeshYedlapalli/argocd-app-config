@@ -35,3 +35,6 @@ Run the below command in application.yaml path
 
 # kubectl apply -f application.yaml
 
+
+# Run the application using below command
+ kubectl port-forward service/myapp-service 3000:3000 -n myapp
