@@ -16,4 +16,4 @@ spec:
       - name: myapp
         image: 9640343275/nodejs-docker-app:1787985496
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
